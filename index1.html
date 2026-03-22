@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Pruthvi Bidgar Graphics</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+color:white;
+text-align:center;
+
+background:url("background.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* HEADER */
+
+header{
+background:rgba(0,0,0,0.8);
+padding:30px;
+}
+
+header h1{
+color:#ffcc00;
+font-size:40px;
+}
+
+header p{
+font-size:18px;
+}
+
+/* SECTION */
+
+.section{
+background:rgba(0,0,0,0.8);
+padding:40px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* FULL SCREEN IMAGE */
+
+#popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+justify-content:center;
+align-items:center;
+}
+
+#popup img{
+max-width:90%;
+max-height:90%;
+}
+
+/* BUTTON */
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:6px;
+margin:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+.whatsapp{
+background:green;
+color:white;
+}
+
+.instagram{
+background:#E1306C;
+color:white;
+}
+
+/* PAYMENT */
+
+.payment img{
+width:250px;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Pruthvi Bidgar Graphics</h1>
+
+<p>Banner | Wedding Card | Poster | Flex Design</p>
+
+</header>
+
+<div class="section">
+
+<h2>My Designs</h2>
+
+<div class="gallery">
+
+<img src="design1.jpg" onclick="openImage(this)">
+<img src="design2.jpg" onclick="openImage(this)">
+<img src="design3.jpg" onclick="openImage(this)">
+<img src="design4.jpg" onclick="openImage(this)">
+<img src="design5.jpg" onclick="openImage(this)">
+<img src="design6.jpg" onclick="openImage(this)">
+<img src="design7.jpg" onclick="openImage(this)">
+<img src="design8.jpg" onclick="openImage(this)">
+<img src="design9.jpg" onclick="openImage(this)">
+
+</div>
+
+</div>
+
+<div id="popup" onclick="closeImage()">
+<img id="popup-img">
+</div>
+
+<div class="section">
+
+<h2>Order Design</h2>
+
+<p>Contact for banner, wedding card, poster and graphic design.</p>
+
+<a href="https://wa.me/918080211859">
+
+<button class="whatsapp">Order on WhatsApp</button>
+
+</a>
+
+<a href="https://www.instagram.com/pruthvi_bidgar_007">
+
+<button class="instagram">Open Instagram</button>
+
+</a>
+
+</div>
+
+<div class="section payment">
+
+<h2>Online Payment</h2>
+
+<p>Scan QR and Pay via phonepay / UPI</p>
+
+<img src="phonepay.jpg">
+
+</div>
+
+<footer>
+
+<p>📞 8080211859</p>
+
+<p>📧 bidgarpruthvi2@gmail.com</p>
+
+<p>© 2026 Pruthvi Bidgar Graphics</p>
+
+</footer>
+
+<script>
+
+function openImage(img){
+
+document.getElementById("popup").style.display="flex";
+
+document.getElementById("popup-img").src=img.src;
+
+}
+
+function closeImage(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
